@@ -64,7 +64,7 @@ IMPORTANT: Do not use the absolute path of the link in the source csv.
 This is limitation within GIT and has nothing to do with the app. This can changed once the app is onboarded to an app engine.
 
 # Run the App using google app engine, google drive and imagehash (Approach 2)
-1) While there are multiple ways how you want to store your image files. My initial approach was to store the image file and the source csv in google drive and integrate that in the icompare.py file.
+1) While there are multiple ways how you want to store your image files. My initial approach was to store the image file and the source csv in google drive and integrate that in the icompare.py and G-Drive.py files.
 But integrating the gdrive api and leveraging its potential was getting a bit complicated since it needed API approvals from google.
 I have still included my work on this on Image-Hash.py file. Just for your reference.
 
