@@ -7,7 +7,7 @@ A .csv file should be created which will have 2 fields with absolute raw path to
 The app will read the .csv file and perform the above mentioned tasks for N number of pairs mentioned in the .csv file.
 # What you'll need
 - Python (2.X or 3.X)
-- Favorite IDE (Pycharm, Anaconda or intelliJ)
+- Favorite IDE (Pycharm, Anaconda or intelliJ). Not a must. Still can get the work done using cmd.
 - Access to Git repo https://github.com/harshavijay85/Image-Compare/ (In this case the repo is open to public)
 - Git or Bitbucket account for yourself and clone the above mentioned repo to yourself.
 
@@ -34,13 +34,14 @@ pip install pandas
 Proceed to install the other modules with the same pip command.
 
 # What the app does
-The app basically 4 main things.
+The app basically does 4 main things. (Read, compare, loop (N) and save)
 1. It uses urllib to get the .csv file from the public git repo.
 2. The image comparision is done using the numpy module where threshold of "15" is set. So if the percentage difference between 2 images is > 15 then they are considered not alike. The elapsed time is calculated by the timeit module. 
 3. In order to compare N number of images pandas profiling dataframe is used.
 4. The results are found in the results.csv file that gets created in the home directory where you save and execute your icompare.py
+5. Initially imagehash module was used but later used numpy since the later provided much better comparision in terms of percentage whereas imagehash can only give basic differences.
 
-# Run the App (Approach 1)
+# Run the App locally with the image and source csv files in github (Approach 1)
 Once you have all the files within the git repo cloned to your repo and with python installed along with your modules continue to test the code by following steps. 
 1. Download a local copy of the icompare.py file on your pc. Execute the python file using the below command. All you need is the icompare.py file in case you want to run a test without making any changes to the image files and source csv file.
 
@@ -56,4 +57,10 @@ Eg: https://github.com/harshavijay85/Image-Compare/blob/master/watch1?raw=true,h
 If you add more images, make sure to add the pairs in the csv as well. Image files in column A are compared with image files in column B.
 IMPORTANT: Do not use the absolute path of the link in the source csv.
 This is limitation within GIT and has nothing to do with the app. This can changed once the app is onboarded to an app engine.
+
+# Run the App using google app engine and google drive (Approach 2)
+
+While there are multiple ways how you want to store your image files. My initial approach was to store the image file and the source csv
+in google drive and integrate that in the icompare.py file.
+But integrating the gdrive api and leveraging its potential was getting a bit complicated since it needed API approvals from google.
 
