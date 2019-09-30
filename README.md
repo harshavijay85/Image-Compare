@@ -27,9 +27,9 @@ The above can be installed through command line tool.
 
 Command to install: 
 
-pip install timeit
+$ pip install timeit
 
-pip install pandas
+$ pip install pandas
 
 Proceed to install the other modules with the same pip command.
 
@@ -40,12 +40,14 @@ The app basically does 4 main things. (Read, compare, loop (N) and save)
 3. In order to compare N number of images pandas profiling dataframe is used.
 4. The results are found in the results.csv file that gets created in the home directory where you save and execute your icompare.py
 5. Initially imagehash module was used but later used numpy since the later provided much better comparision in terms of percentage whereas imagehash can only give basic differences.
+6. Once you have all the files within the git repo cloned to your repo and with python installed along with your modules continue to test the code by following the below steps. 
 
 # Run the App locally with the image and source csv files in github (Approach 1)
-Once you have all the files within the git repo cloned to your repo and with python installed along with your modules continue to test the code by following steps. 
-1. Download a local copy of the icompare.py file on your pc. Execute the python file using the below command. All you need is the icompare.py file in case you want to run a test without making any changes to the image files and source csv file. Since harshavijay85 repo is open to public, the app will be able to retrieve them.
 
-Eg: python icompare.py
+1. Steps to consider incase you want use harshavijay85 repo but run the python file locally on your PC. 
+Download a local copy of the icompare.py file on your pc. Execute the python file using the below command in your cmd or terminal window. All you need is the icompare.py file in case you want to run a test without making any changes to the image files and source csv file. Since harshavijay85 repo is open to public, the app will be able to retrieve them.
+
+Code: $ python icompare.py
 
 This should create the results.csv file with percentage difference and time elapsed for the images along with the pass or fail classification.
 
