@@ -41,5 +41,19 @@ The app basically 4 main things.
 4. The results are found in the results.csv file that gets created in the home directory where you save and execute your icompare.py
 
 # Run the App (Approach 1)
-Once you have all the files within the git repo cloned to your repo and with python installed along with your modules continue to test the code by following steps.
-1. 
+Once you have all the files within the git repo cloned to your repo and with python installed along with your modules continue to test the code by following steps. 
+1. Download a local copy of the icompare.py file on your pc. Execute the python file using the below command. All you need is the icompare.py file in case you want to run a test without making any changes to the image files and source csv file.
+
+Eg: python icompare.py
+
+This should create the results.csv file with percentage difference and time elapsed for the images along with the pass or fail classification.
+
+2. Steps to consider in case you want to use your git repo instead of harshavijay85. 
+Replace the https://raw.githubusercontent.com/harshavijay85/Image-Compare/master/Image-Compare.csv with your git repo link and correct source csv filename. Make sure you have the source csv file and images in your git repo. You can download new images.
+
+3. Steps to consider in case you want to use your images. Remove the file extensions of the image files such as .jpg and .png and then upload them to your git repo. Once the files are uploaded add the raw image file path link to the source file.
+Eg: https://github.com/harshavijay85/Image-Compare/blob/master/watch1?raw=true,https://github.com/harshavijay85/Image-Compare/blob/master/watch2?raw=true
+If you add more images, make sure to add the pairs in the csv as well. Image files in column A are compared with image files in column B.
+IMPORTANT: Do not use the absolute path of the link in the source csv.
+This is limitation within GIT and has nothing to do with the app. This can changed once the app is onboarded to an app engine.
+
