@@ -50,18 +50,18 @@ Eg: python icompare.py
 This should create the results.csv file with percentage difference and time elapsed for the images along with the pass or fail classification.
 
 2. Steps to consider in case you want to use your git repo instead of harshavijay85. 
-Replace the https://raw.githubusercontent.com/harshavijay85/Image-Compare/master/Image-Compare.csv with your git repo link in the icompare.py file. https://raw.githubusercontent.com/"your_repo"/Image-Compare/master/Image-Compare.csv instead of the previous repo. Make sure to keep the csv filenames and image filenames unchanged in your repor as compared to harshavijay85 repo.
+Replace the https://raw.githubusercontent.com/harshavijay85/Image-Compare/master/Image-Compare.csv with your git repo link in the icompare.py file. https://raw.githubusercontent.com/"your_repo"/Image-Compare/master/Image-Compare.csv instead of the previous repo. Make sure to keep the csv filenames and image filenames unchanged in your repo as compared to harshavijay85 repo.
 
 3. Steps to consider in case you want to use your images. 
-Before you upload your images to the git repo. Locally remove the file extensions of the image files such as .jpg and .png and then upload them to your git repo. Once the files are uploaded add the raw image file path link to the source csv file.
-Eg of 1 csv record: https://github.com/"your_repo"/Image-Compare/blob/master/watch1?raw=true,https://github.com/"your_repo"/Image-Compare/blob/master/watch2?raw=true
+Before you upload your images to the git repo. Locally remove the file extensions of the image files such as .jpg and .png and then upload them to your git repo. Once the files are uploaded, add the raw image file path link to the source csv file.
+Example of 1 csv record: https://github.com/"your_repo"/Image-Compare/blob/master/watch1?raw=true,https://github.com/"your_repo"/Image-Compare/blob/master/watch2?raw=true
 If you add more images, make sure to add the pairs in the csv as well. Image files in column A are compared with image files in column B.
 Make sure that the image filenames match with the filename path links within the csv.
+
 IMPORTANT: Do not use the absolute path of the link in the source csv.
 This is limitation within GIT and has nothing to do with the app. This can changed once the app is onboarded to an app engine.
 
 # Run the App using google app engine, google drive and imagehash (Approach 2)
-
 1) While there are multiple ways how you want to store your image files. My initial approach was to store the image file and the source csv in google drive and integrate that in the icompare.py file.
 But integrating the gdrive api and leveraging its potential was getting a bit complicated since it needed API approvals from google.
 I have still included my work on this on Image-Hash.py file. Just for your reference.
