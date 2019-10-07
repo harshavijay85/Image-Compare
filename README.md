@@ -1,6 +1,5 @@
 # Image Compare Project
 This app will automate the manual task of comparing image pairs. 
-This will also introduce the user to basics of machine learning.
 # Objective
 Create an app that will compare image pairs, find if they are similar, rate the difference and populate the elapsed time.
 A .csv file should be created which will have 2 fields with absolute raw path to the images mentioned in the fields.
@@ -22,7 +21,7 @@ Python 3.7.2 (default, Dec 29 2018, 00:00:04)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 
-3. Install necessary python modules needed for this particular app such as "pandas", "timeit", "time", "imagehash", "Image", "numpy", "PIL" and "urllib".
+3. Install necessary python modules needed for this particular app such as "pandas", "timeit", "time", "imagehash", "Image", "numpy", "PIL", "os" and "urllib".
 The above can be installed through command line tool.
 
 Command to install: 
@@ -42,28 +41,30 @@ The app basically does 4 main things. (Read, compare, loop (N) and save)
 5. Initially imagehash module was used but later used numpy since the later provided much better comparision in terms of percentage whereas imagehash can only give basic differences.
 6. Once you have all the files within the git repo cloned to your repo and with python installed along with your modules continue to test the code by following the below steps. 
 
-# Run the App locally with the image and source csv files in github (Approach 1)
+# Run the App locally with the image and source csv files in local directory (Approach 1)
 
-1. Steps to consider incase you want use harshavijay85 repo but run the python file locally on your PC. 
-Download a local copy of the icompare.py file on your pc. Execute the python file using the below command in your cmd or terminal window. All you need is the icompare.py file in case you want to run a test without making any changes to the image files and source csv file. Since harshavijay85 repo is open to public, the app will be able to retrieve them.
+1. Steps to consider incase you want use local image files. 
+
+Download a local copy of the icompare.py file on your pc from the Git repo (https://github.com/harshavijay85/Image-Compare/)
+Make sure you create the following directory path. C:\Documents\Documents\Loblaw\Image-Compare-master or in case you want to use your path, please update the python file accordingly.
+Create and place the csv file in the local path mentioned above - "C:\Documents\Documents\Loblaw\Image-Compare-master\Image-Compare.csv"
+Place the absolute paths of your images in column1 and column2 within the csv and save the csv.
+You should get the results generated in the same path.
+
+Limitations:
+
+Make sure the 1st column and 2nd column are renamped Image1 and Image2 respectively. 
+
+Command to execute: 
 
 Code: $ python icompare.py
 
-This should create the results.csv file with percentage difference and time elapsed for the images along with the pass or fail classification.
+This should create the results.csv file with percentage difference and time elapsed for the images.
 
-2. Steps to consider in case you want to use your git repo instead of harshavijay85. (Good and must for unit testing)
-Replace the https://raw.githubusercontent.com/harshavijay85/Image-Compare/master/Image-Compare.csv with your git repo link in the icompare.py file. https://raw.githubusercontent.com/"your_repo"/Image-Compare/master/Image-Compare.csv instead of the previous repo. Make sure to keep the csv filenames and image filenames unchanged in your repo as compared to harshavijay85 repo.
+# Unit-Testing Criteria
 
-3. Steps to consider in case you want to use your images. (Good and must for unit testing)
-Before you upload your images to the git repo. Locally remove the file extensions of the image files such as .jpg and .png and then upload them to your git repo. Once the files are uploaded, add the raw image file path link to the source csv file.
-Example of 1 csv record: https://github.com/"your_repo"/Image-Compare/blob/master/watch1?raw=true,https://github.com/"your_repo"/Image-Compare/blob/master/watch2?raw=true
-If you add more images, make sure to add the pairs in the csv as well. Image files in column A are compared with image files in column B.
-Make sure that the image filenames match with the filename path links within the csv.
+1. Change the image files to multiple png, jpg and execute the comparision
+2. Use the same image with different color format
 
-IMPORTANT: Do not use the absolute path of the link in the source csv.
-This is limitation within GIT and has nothing to do with the app. This can changed once the app is onboarded to an app engine.
-
-# Run the App using google app engine, google drive and imagehash (Approach 2)
-1) While there are multiple ways how you want to store your image files. My initial approach was to store the image file and the source csv in google drive and integrate that in the icompare.py and G-Drive.py files.
-But integrating the gdrive api and leveraging its potential was getting a bit complicated since it needed API approvals from google.
-I have still included my work on this on Image-Hash.py file. Just for your reference.
+# Unit_Testing Success Criteria
+1. The comparision rank will be > 0 even for the slightest change regardless of color and image size.
