@@ -66,5 +66,5 @@ This should create the results.csv file with percentage difference and time elap
 1. Change the image files to multiple png, jpg and execute the comparision
 2. Use the same image with different color format
 
-# Unit_Testing Success Criteria
+# Unit-Testing Success Criteria
 1. The comparision rank will be > 0 even for the slightest change regardless of color and image size.
