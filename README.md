@@ -48,8 +48,10 @@ The app basically does 4 main things. (Read, compare, loop (N) and save)
 Download a local copy of the icompare.py file on your pc from the Git repo (https://github.com/harshavijay85/Image-Compare/)
 Make sure you create the following directory path. C:\Documents\Documents\Loblaw\Image-Compare-master or in case you want to use your path, please update the python file accordingly.
 Create and place the csv file in the local path mentioned above - "C:\Documents\Documents\Loblaw\Image-Compare-master\Image-Compare.csv"
+You can use the sample csv file (Image-Compare.csv) in the git repo as a reference. 
 Place the absolute paths of your images in column1 and column2 within the csv and save the csv.
 You should get the results generated in the same path.
+A sample results.csv can be found in the git repo. But your result should get generated in your absolute path.
 
 Limitations:
 
