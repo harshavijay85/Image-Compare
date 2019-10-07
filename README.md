@@ -21,7 +21,7 @@ Python 3.7.2 (default, Dec 29 2018, 00:00:04)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 
-3. Install necessary python modules needed for this particular app such as "pandas", "timeit", "time", "imagehash", "Image", "numpy", "PIL", "os" and "urllib".
+3. Install necessary python modules needed for this particular app such as "pandas", "timeit", "time" and "numpy"
 The above can be installed through command line tool.
 
 Command to install: 
@@ -34,7 +34,7 @@ Proceed to install the other modules with the same pip command.
 
 # What the app does
 The app basically does 4 main things. (Read, compare, loop (N) and save)
-1. It uses urllib to get the .csv file from the public git repo.
+1. The script open the local csv file using the path provided in the script.
 2. The image comparision is done using the numpy module where threshold of "15" is set. So if the percentage difference between 2 images is > 15 then they are considered not alike. The elapsed time is calculated by the timeit module. 
 3. In order to compare N number of images pandas profiling dataframe is used.
 4. The results are found in the results.csv file that gets created in the home directory where you save and execute your icompare.py
